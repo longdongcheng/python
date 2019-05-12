@@ -12,6 +12,17 @@ class Person:
         return "哈哈{}".format(self.name)
 
 
+def login(request):
+    if request.method.GET = 'get':
+        return render(request, 'login.html')
+    elif request.method.GET = 'post':
+        name = request.GET.get('uname')
+        pwd = request.GET.get('pwd')
+        if name == 'long' and pwd == 'pythonvip':
+            return HttpResponse('登录成功')
+        else:
+            return render(request, 'login.html')
+
 
 person = Person('long', 19, 'M')
 
